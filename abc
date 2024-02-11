@@ -1,0 +1,18 @@
+// { $group: { _id: '$category',  totalprice: { $sum: '$price' } , { $match: {  price: { $gt: 500 } }  } ])
+
+// db.products.aggregate([
+//     {
+//       $match: {
+//         price: { $gt: 500 }
+//       }
+//     },
+//     {
+//       $group: {
+//         _id: '$category',
+//         totalprice: { $sum: '$price' }
+//       }
+//     },
+//     {
+//         $sort : {totalprice : 1}
+//     }
+//   ])  
